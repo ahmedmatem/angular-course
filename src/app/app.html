@@ -3,9 +3,13 @@
 <main>
     <div id="users">
         @for (u of users; track $index;) {
-            <app-user [user]="u" />
+            <app-user [user]="u" (selectedUser)="onSelectedUser($event)" />
         }
     </div>
+    <div>
+        <app-task [name]="selectedUser?.name"></app-task>
+    </div>
+    
 </main>
 
 
