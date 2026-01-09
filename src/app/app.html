@@ -2,7 +2,9 @@
 
 <main>
     <div id="users">
-        <app-user />
+        @for (u of users; track $index;) {
+            <app-user [user]="u" />
+        }
     </div>
 </main>
 
