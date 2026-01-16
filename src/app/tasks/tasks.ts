@@ -3,9 +3,9 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-task',
   imports: [],
-  templateUrl: './task.html',
-  styleUrl: './task.css'
+  templateUrl: './tasks.html',
+  styleUrl: './tasks.css'
 })
-export class Task {
+export class Tasks {
   @Input() name: string | undefined;
 }
