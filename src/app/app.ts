@@ -13,7 +13,7 @@ import { Task } from './task/task';
 export class App {
   users = DUMMY_USERS;
   protected readonly title = 'first-app';
-  selectdeUserId: string = 'u1';
+  selectdeUserId?: string;
   
   get selectedUser(){
     return this.users.find(u => u.id === this.selectdeUserId);

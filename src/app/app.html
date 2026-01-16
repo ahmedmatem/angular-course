@@ -2,13 +2,21 @@
 
 <main>
     <div id="users">
-        @for (u of users; track $index;) {
+        @for (u of users; track u.id;) {
             <app-user [user]="u" (selectedUser)="onSelectedUser($event)" />
         }
     </div>
-    <div>
-        <app-task [name]="selectedUser?.name"></app-task>
-    </div>
+
+    @if(selectedUser){
+        <div>
+            <app-task [name]="selectedUser.name"></app-task>
+        </div>
+    } @else {
+        <div>
+            <p>Select user to show tasks.</p>
+        </div>
+    }
+    
     
 </main>
 
