@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { TaskModel } from './task.model';
 
 @Component({
   selector: 'app-task',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './task.css'
 })
 export class Task {
+  @Input() task: TaskModel | undefined;
 
+  onComplete(){
+    console.log('Task is done ...');
+  }
 }

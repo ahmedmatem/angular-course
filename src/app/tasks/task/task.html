@@ -1,8 +1,10 @@
 <article>
-    <h2>Task</h2>
-    <time>TIME</time>
-    <p>SUMMARY</p>
-    <p class="actions">
-        <button>Complete</button>
-    </p>
+    @if(task){
+        <h2>{{ task.title }}</h2>
+        <time>{{ task.dueDate }}</time>
+        <p>{{ task.summary }}</p>
+        <p class="actions">
+            <button (click)="onComplete()">Complete</button>
+        </p>
+    }    
 </article>
